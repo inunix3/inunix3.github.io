@@ -7,7 +7,7 @@ hide_toc: true
 This site was built using [Jekyll](https://jekyllrb.com/) and is being hosted on
 [GitHub Pages](https://pages.github.com/).
 
-Source code is available on [GitHub](https://github.com/inunix3/website).
+Source code is available on [GitHub](https://github.com/inunix3/inunix3.github.io).
 
 The font being used is [Linux Biolinum G](https://numbertext.org/linux/index.html).
 
