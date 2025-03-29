@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% assign post_ctime = page.date | date: "%F" %}
+
+<header>
+    <h1>{{ page.title }}</h1>
+
+    <hr>
+    <p><i>created: <time datetime="{{ post_ctime }}">{{ post_ctime | date_to_string }}</time> /
+        modified: <time datetime="{{ page.mtime }}">{{ page.mtime | date_to_string }}</time></i></p>
+    <br>
+</header>
+
+<article>
+    {{ content }}
+</article>

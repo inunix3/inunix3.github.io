@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "Linux Biolinum G";
+  src: url("/assets/fonts/LinBiolinum_R_G.ttf");
+}
+
+@font-face {
+  font-family: "Linux Biolinum G";
+  src: url("/assets/fonts/LinBiolinum_RB_G.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Linux Biolinum G";
+  src: url("/assets/fonts/LinBiolinum_RI_G.ttf");
+  font-style: italic;
+}
+
+body {
+  background: linear-gradient(#222, #000);
+  color: black;
+  font-family: "Linux Biolinum G", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #005386;
+  text-transform: uppercase;
+}
+
+li {
+  list-style: square;
+}
+
+li::marker {
+  color: #474747;
+}
+
+strong {
+  color: #222222;
+}
+
+address {
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #262626;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+  gap: 10px;
+  max-width: 1000px;
+}
+
+#topbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border: 1px solid #dcdcdc;
+  max-width: 998px;
+  width: 100%;
+  max-height: 40px;
+  height: 100%;
+  align-items: center;
+}
+
+#main-area {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  max-width: 1000px;
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border: 1px solid #dcdcdc;
+  max-width: 250px;
+  width: 100%;
+  padding: 5px;
+}
+
+#toc-title, #post-list-title {
+  color: #474747;
+  padding: 5px;
+}
+
+#post-list-title {
+  padding-top: 10px;
+}
+
+#toc {
+  font-size: 0.7rem;
+  border-bottom: 1px solid #dcdcdc;
+  overflow-wrap: break-word;
+  max-width: inherit;
+  padding: 5px 5px 10px 5px;
+}
+
+#toc ul {
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+
+#posts-list {
+  border-bottom: 1px solid #dcdcdc;
+  padding: 10px 0 10px 0;
+}
+
+#github-link {
+  display: block;
+  margin: 15px;
+  max-width: 100%;
+  width: 30px;
+  height: auto;
+}
+
+#navigation li {
+  display: inline-block;
+}
+
+:is(#navigation, #posts-list) li {
+  margin-left: 25px;
+  overflow-wrap: break-word;
+}
+
+:is(#toc, #navigation, #posts-list) li a {
+  color: #005386;
+  text-decoration: none;
+}
+
+:is(#toc, #navigation, #posts-list) li a:hover {
+  text-decoration: underline;
+}
+
+#content {
+  margin: 0;
+  padding: 10px 30px 8px 30px;
+  min-height: 100vh;
+  overflow: hidden;
+  max-width: auto;
+  width: 100%;
+  overflow-wrap: break-word;
+  background-color: #f9f9f9;
+  border: 1px solid #dcdcdc;
+  font-size: 0.92em;
+}

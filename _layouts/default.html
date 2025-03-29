@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    {% if page.use_mathjax %}
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    {% endif %}
+</head>
+
+<body>
+    <div id="container">
+        <div id="topbar">
+            {% include navigation.html %}
+
+            <a href="https://github.com/inunix3"><img id="github-link" src="/assets/images/github-mark.svg" alt="GitHub" /></a>
+        </div>
+
+        <div id="main-area">
+            <main id="content">
+                {{ content }}
+            </main>
+
+            <div id="sidebar">
+                {% unless page.hide_toc %}
+                <div id="toc-title">TABLE OF CONTENTS</div>
+
+                <div id="toc">
+                    {% include toc.html html=content h_min=2 %}
+                </div>
+                {% endunless %}
+
+                <div id="post-list-title">OTHER POSTS</div>
+
+                {% include posts-list.html %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
