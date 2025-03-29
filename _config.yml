@@ -1,3 +1,5 @@
+domain: inunix3.github.io
+url: https://inunix3.github.io
 exclude: ["README.md", "LICENSE_MIT.txt", "LICENSE_CC_BY_NC_ND_4.0.txt"]
 markdown: kramdown
 highlighter: rouge
