@@ -7,3 +7,4 @@ kramdown:
   syntax_highlighter: rouge
   auto_ids: true
   input: GFM
+  parse_block_html: true

@@ -1,154 +1,226 @@
-@font-face {
-  font-family: "Linux Biolinum G";
-  src: url("/assets/fonts/LinBiolinum_R_G.ttf");
-}
-
-@font-face {
-  font-family: "Linux Biolinum G";
-  src: url("/assets/fonts/LinBiolinum_RB_G.ttf");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Linux Biolinum G";
-  src: url("/assets/fonts/LinBiolinum_RI_G.ttf");
-  font-style: italic;
-}
+/* disclaimer: i'm really bad at CSS */
 
 body {
-  background: linear-gradient(#222, #000);
-  color: black;
-  font-family: "Linux Biolinum G", sans-serif;
-  margin: 0;
-  padding: 0;
+    background: linear-gradient(#222, #000);
+    color: black;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+code {
+    font-size: 12px;
+}
+
+blockquote {
+    font-style: italic
 }
 
 a {
-  color: #005386;
-  text-transform: uppercase;
+    color: #005386;
+    text-transform: uppercase;
 }
 
-li {
-  list-style: square;
+ul li {
+    list-style-type: square;
+}
+
+ol li {
+    list-style-type: decimal;
 }
 
 li::marker {
-  color: #474747;
+    color: #474747;
 }
 
 strong {
-  color: #222222;
+    color: #222222;
+}
+
+hr {
+    border: 1px solid #ddd;
 }
 
 address {
-  font-style: normal;
+    font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #262626;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #262626;
+}
+
+#content img {
+    margin: auto;
+    display: block;
+}
+
+table {
+    background-color: #f8f9fa;
+    color: #000;
+    margin: auto;
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+}
+
+table>tr>th,
+table>tr>td,
+table>*>tr>th,
+table>*>tr>td {
+    border: 1px solid #aaa;
+    padding: 0.2em 0.4em;
+}
+
+table>tr>th,
+table>*>tr>th {
+    background-color: #eaecf0;
+    color: #000;
+    text-align: center;
+}
+
+.note, .info {
+    margin: 2em 0 !important;
+    padding: 0.75em;
+    color: #3d4144;
+    text-indent: initial;
+    background-color: #d4e1ff;
+    border: 1px solid #bfcbe6;
+}
+
+.warning {
+    margin: 2em 0 !important;
+    padding: 0.75em;
+    color: #3d4144;
+    text-indent: initial;
+    background-color: #ffddb4;
+    border: 1px solid #e5c6a2;
+}
+
+.caution {
+    margin: 2em 0 !important;
+    padding: 0.75em;
+    color: #3d4144;
+    text-indent: initial;
+    background-color: #fffdb7;
+    border: 1px solid #e2e0a2;
+}
+
+.todo {
+    margin: 2em 0 !important;
+    padding: 0.75em;
+    color: #3d4144;
+    text-indent: initial;
+    background-color: #e5ffc9;
+    border: 1px solid #c8deaf;
 }
 
 #container {
-  display: flex;
-  flex-direction: column;
-  margin: 40px auto;
-  gap: 10px;
-  max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    gap: 10px;
+    max-width: 1200px;
 }
 
 #topbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: #f9f9f9;
-  border: 1px solid #dcdcdc;
-  max-width: 998px;
-  width: 100%;
-  max-height: 40px;
-  height: 100%;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    max-width: 1198px;
+    width: 100%;
+    max-height: 40px;
+    height: 100%;
+    align-items: center;
 }
 
 #main-area {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  max-width: 1000px;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0;
+    padding: 0;
 }
 
 #sidebar {
-  display: flex;
-  flex-direction: column;
-  background-color: #f9f9f9;
-  border: 1px solid #dcdcdc;
-  max-width: 250px;
-  width: 100%;
-  padding: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    max-width: 250px;
+    width: 100%;
+    padding: 5px;
 }
 
-#toc-title, #post-list-title {
-  color: #474747;
-  padding: 5px;
+#toc-title,
+#post-list-title {
+    color: #474747;
+    padding: 5px;
 }
 
 #post-list-title {
-  padding-top: 10px;
+    padding-top: 10px;
 }
 
 #toc {
-  font-size: 0.7rem;
-  border-bottom: 1px solid #dcdcdc;
-  overflow-wrap: break-word;
-  max-width: inherit;
-  padding: 5px 5px 10px 5px;
+    font-size: 0.7rem;
+    border-bottom: 1px solid #dcdcdc;
+    overflow-wrap: break-word;
+    max-width: inherit;
+    padding: 5px 5px 10px 5px;
 }
 
 #toc ul {
-  margin: 0;
-  padding: 0 0 0 15px;
+    margin: 0;
+    padding: 0 0 0 15px;
 }
 
 #posts-list {
-  border-bottom: 1px solid #dcdcdc;
-  padding: 10px 0 10px 0;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 10px 0 10px 0;
 }
 
 #github-link {
-  display: block;
-  margin: 15px;
-  max-width: 100%;
-  width: 30px;
-  height: auto;
+    display: block;
+    margin: 15px;
+    max-width: 100%;
+    width: 30px;
+    height: auto;
 }
 
 #navigation li {
-  display: inline-block;
+    display: inline-block;
 }
 
 :is(#navigation, #posts-list) li {
-  margin-left: 25px;
-  overflow-wrap: break-word;
+    margin-left: 25px;
+    overflow-wrap: break-word;
 }
 
 :is(#toc, #navigation, #posts-list) li a {
-  color: #005386;
-  text-decoration: none;
+    color: #005386;
+    text-decoration: none;
 }
 
 :is(#toc, #navigation, #posts-list) li a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 #content {
-  margin: 0;
-  padding: 10px 30px 8px 30px;
-  min-height: 100vh;
-  overflow: hidden;
-  max-width: auto;
-  width: 100%;
-  overflow-wrap: break-word;
-  background-color: #f9f9f9;
-  border: 1px solid #dcdcdc;
-  font-size: 0.92em;
+    margin: 0;
+    padding: 10px 30px 8px 30px;
+    min-height: 100vh;
+    overflow: hidden;
+    max-width: auto;
+    width: 100%;
+    overflow-wrap: break-word;
+    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    font-size: 0.92em;
 }
