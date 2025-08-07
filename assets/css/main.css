@@ -11,6 +11,9 @@ body {
 
 code {
     font-size: 12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 blockquote {
@@ -57,6 +60,8 @@ h6 {
 
 #content img {
     margin: auto;
+    max-width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -81,6 +86,12 @@ table>*>tr>th {
     background-color: #eaecf0;
     color: #000;
     text-align: center;
+}
+
+.image-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 .note, .info {

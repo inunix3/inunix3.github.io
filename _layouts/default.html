@@ -36,7 +36,11 @@
                     <div id="toc-title">TABLE OF CONTENTS</div>
 
                     <div id="toc">
-                        {% include toc.html html=content h_min=2 %}
+                        {% if page.not_post %}
+                            {% include toc.html html=content h_min=1 %}
+                        {% else %}
+                            {% include toc.html html=content h_min=2 %}
+                        {% endif %}
                     </div>
                 {% endunless %}
 
